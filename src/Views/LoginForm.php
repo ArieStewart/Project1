@@ -12,9 +12,12 @@ class LoginForm extends View
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Example Login Form</title>
+        <title>Login Form</title>
+        <link rel="stylesheet" type="text/css" href="http://localhost/Project1/public/css/LoginStyle.css">
     </head>
     <body>
+        <p>Welcome</p>
+
         <div align="center">
             <form method="POST" action="/auth">
                 Username: <input type="text" name="username" size="15" /><br />

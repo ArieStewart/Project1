@@ -44,7 +44,7 @@ class SimpleRequest implements IRequest
             );
         }
 
-        $this->data = json_decode(json_encode($_SERVER));
+        $this->data = json_decode(json_encode($serverGlobal));
 
         $this->post = null;
 
@@ -76,4 +76,6 @@ class SimpleRequest implements IRequest
     {
         return $this->data->REQUEST_URI;
     }
+
+    //Add scrubber method here
 }

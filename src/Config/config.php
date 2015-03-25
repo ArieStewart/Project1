@@ -10,11 +10,13 @@ $routerDir = $projectDir . '/src/Common/Routers';
 $srcDir = $projectDir . '/src';
 $viewsDir = $projectDir . '/src/Views';
 
+//Any new classes need to be added to the classes map
 $config = [
     'app' => [
         'classes'      => [
             'Common\\Authentication\\FileBased' => $authDir . '/FileBased.php',
             'Common\\Authentication\\InMemory'  => $authDir . '/InMemory.php',
+            'Common\\Authentication\\MySQL'     => $authDir . '/MySQL.php',
             'Common\\Http\\IRequest'            => $httpDir . '/IRequest.php',
             'Common\\Http\\SimpleRequest'       => $httpDir . '/SimpleRequest.php',
             'Common\\Routers\\IRouter'          => $routerDir . '/IRouter.php',
