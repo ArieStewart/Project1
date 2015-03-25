@@ -76,6 +76,4 @@ class SimpleRequest implements IRequest
     {
         return $this->data->REQUEST_URI;
     }
-
-    //Add scrubber method here
 }

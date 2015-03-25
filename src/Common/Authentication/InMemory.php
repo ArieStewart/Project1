@@ -9,7 +9,17 @@
 namespace Common\Authentication;
 
 
-class InMemory implements IAuthentication {
+class InMemory implements IAuthentication
+{
+    public function __construct()
+    {
+        $this->inMemArray = [
+                        ['Mark','pass123'],
+                        ['James','pass456'],
+                        ['Stone','pass789']
+        ];
+    }
+
 
     /**
      * Function authenticate
@@ -22,6 +32,16 @@ class InMemory implements IAuthentication {
      */
     public function authenticate($username, $password)
     {
-        // TODO: Implement authenticate() method.
+        $rows = count($this->inMemArray);
+        $i = 0;
+
+        while($i < $rows) {
+
+            if ($this->inMemArray[$i][0] === $username && $this->inMemArray[$i][1] === $password) {
+                return true;
+            }
+            $i++;
+        }
+        return false;
     }
 }
